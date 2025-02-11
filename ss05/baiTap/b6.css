@@ -1,0 +1,48 @@
+body {
+  margin-left: 15px;
+}
+#text1 {
+  color: red;
+  background-color: lightgray;
+}
+#border-text {
+  border-width: 3px;
+  border-style: solid;
+  border-color: green;
+  padding: 1em;
+  text-align: center;
+}
+.text2 {
+  background-color: lightgray;
+}
+pre {
+  margin-left: 8px;
+  border-left: 3px solid green;
+}
+#pre1 {
+  color: rgb(223, 140, 31);
+}
+#pre2 {
+  color: red;
+}
+#pre3 {
+  color: blue;
+}
+#pre4 {
+  color: red;
+}
+#pre5 {
+  color: blue;
+}
+.try-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+#example {
+  margin-left: 8px;
+}

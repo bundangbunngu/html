@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+.header-1 {
+  color: white;
+}
+.text-body {
+  color: lightgreen;
+  text-decoration: underline dotted;
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+}

@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  background-color: lightgray;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  border-color: aliceblue;
+}
+th {
+  background-color: rgb(56, 56, 227);
+  color: white;
+}
+.tr-2 {
+  background-color: white;
+}
