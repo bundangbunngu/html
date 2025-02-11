@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    background-color: rgb(239, 237, 237);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-color: white;
+}
+
+#border-header{
+    background-color: rgba(65, 96, 188, 0.985);
+    color: white;
+}
+.white-table{
+    background-color: white;
+}
+button{
+    border: none;
+  padding: 10px 20px;
+}
+.view{
+    background-color: green;
+    color: white;
+}
+.update{
+    background-color: orange;
+    color: black;
+}
+.delete{
+    background-color: red;
+    color: white;
+}
