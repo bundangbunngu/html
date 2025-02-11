@@ -1,0 +1,45 @@
+
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: rgb(190, 190, 190);
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .inline {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        

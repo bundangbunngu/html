@@ -1,0 +1,26 @@
+.vachke {
+  border-top: 2px dashed gray;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: 10px;
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #2d2159;
+}
+.middle-line {
+  border-right: 2px solid #ccc;
+}
+.text {
+  color: #9d9999;
+}
