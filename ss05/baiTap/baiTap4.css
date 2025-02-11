@@ -1,0 +1,14 @@
+.text{
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+.td{
+    padding-bottom: 27%;
+}
+.headding2 ,.headding3{
+    display: inline-block;
+}
+.headding3, .headding4{
+    opacity: 0.5;
+}
