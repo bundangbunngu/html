@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main {
+  margin: 10px;
+  border: 1px solid #ccc;
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.text1 {
+  font-weight: bold;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: relative;
+}
+.btn1 {
+  border-style: none;
+  background-color: white;
+  font-size: 20px;
+  position: absolute;
+  left: 390px;
+}
+.text2 {
+  margin: 10px;
+  line-height: 30px;
+}
+input {
+  width: 100%;
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.btn2 {
+  margin-top: 10px;
+  position: relative;
+  left: 240px;
+}
+.close-button {
+  background-color: darkgrey;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.send-button {
+  background-color: blue;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.hr {
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main1 {
+  border: 1px solid #ccc;
+  width: 24%;
+  border-radius: 10px;
+  margin:5px;
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  display: inline-block;
+}
+#h1{
+    color: darkred;
+}
+#p{
+    color: darkblue;
+}
