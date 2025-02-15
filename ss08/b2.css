@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+form {
+  padding: 20px;
+  width: 500px;
+  background-color: #524560;
+}
+label {
+  display: block;
+  color: white;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #73697F;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #524560;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
