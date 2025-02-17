@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  margin: 10px;
+  height: 500px;
+  width: 1000px;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+.main .text {
+  width: 100px;
+  height: 100px;
+  background-color: lightskyblue;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}

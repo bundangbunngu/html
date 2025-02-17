@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.all {
+  color: white;
+}
+.all .header {
+  height: 50px;
+  background-color: skyblue;
+  line-height: 50px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.all .main {
+  display: flex;
+  height: 500px;
+  gap: 10px;
+}
+.all .main .side_bar {
+  flex: 1;
+  background-color: green;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.all .main .content {
+  flex: 2;
+  background-color: red;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.all .footer {
+  background-color: blueviolet;
+  margin-top: 10px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+}

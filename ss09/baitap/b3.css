@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 5px;
+}
+.main .text {
+  width: 24.4%;
+  height: 50px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+}
+.main .text2 {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  padding-right: 5px;
+}
+#five {
+  flex: 2;
+}
