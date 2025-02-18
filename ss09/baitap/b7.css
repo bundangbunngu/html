@@ -29,21 +29,22 @@ body {
   width: 40%;
   margin-left: 200px;
   background: white;
-  padding-bottom: 10px;
-  border-radius: 5px;
 }
 .card1 {
   background-color: gray;
   padding-top: 10px;
   padding-left: 20px;
+  border-radius: 5px;
 }
 .card2 {
   padding-top: 10px;
   background-color: lightgray;
   padding-left: 20px;
   padding-bottom: 20px;
+  border-radius: 5px;
 }
 .footer {
+    margin-top: 10px;
   background-color: #333;
   color: white;
   text-align: center;
