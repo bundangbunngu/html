@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .payment-form {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .btn-primary {
+        background-color: #2563eb;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="payment-form">
+      <h3 class="mb-3">Payment</h3>
+
+      <div class="mb-3">
+        <label class="form-check">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="paymentMethod"
+            checked
+          />
+          Credit card
+        </label>
+        <label class="form-check">
+          <input type="radio" class="form-check-input" name="paymentMethod" />
+          Debit card
+        </label>
+        <label class="form-check">
+          <input type="radio" class="form-check-input" name="paymentMethod" />
+          PayPal
+        </label>
+      </div>
+
+      <div class="mb-3">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Name on card</label>
+                <input type="text" class="form-control" placeholder="Full name as displayed on card">
+            </div>
+        
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Credit card number</label>
+                <input type="text" class="form-control" placeholder="xxxx xxxx xxxx xxxx">
+            </div>
+        </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Expiration</label>
+          <input type="text" class="form-control" placeholder="MM/YY" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">CVV</label>
+          <input type="text" class="form-control" placeholder="123" />
+        </div>
+      </div>
+
+      <button class="btn btn-primary w-100">Continue to checkout</button>
+    </div>
+  </body>
+</html>
