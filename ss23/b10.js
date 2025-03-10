@@ -25,7 +25,7 @@ do {
           do {
             let number = prompt("Mời bạn nhập vào giá trị vị trí thứ " + i);
             if (Number.isInteger(Number(number))) {
-              arr.push(Number(number)); // Ép kiểu về số
+              arr.push(Number(number));
               break;
             } else {
               alert("Mời bạn nhập lại giá trị số nguyên tại vị trí " + i);
