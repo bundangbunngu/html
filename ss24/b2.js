@@ -1,83 +1,76 @@
 let arr = [];
-let sum;
-let flag;
-do {
-  console.log(" 1. Nhập mảng số nguyên");
-  console.log("2. Hiển thị mảng");
+let n;
+while (1) {
+  console.log("======================MENU===================");
+  console.log("1. Nhập số phần tử cần nhập và giá trị của các phần tử. ");
+  console.log("2. In ra giá trị các phần tử đang quản lý.");
   console.log("3. Tìm các phần tử chẵn và lẻ");
   console.log("4. Tính trung bình cộng của mảng");
-  console.log("5. Tìm phần tử lớn thứ hai trong mảng");
-  console.log("6. Thoát chương trình");
-  let choice = +prompt("Mời bạn nhập lựa chọn của mình");
+  console.log("5. Xóa phần tử tại vị trí chỉ định");
+  console.log("6. Tìm phần tử lớn thứ hai trong mảng");
+  console.log("7. Thoát.");
+  let choice = +prompt("Nhập lựa chọn của bạn: ");
   switch (choice) {
     case 1:
-      let length = +prompt("Mời bạn nhập độ dài của mảng");
-      if (length > 0) {
-        for (let i = 1; i <= length; i++) {
-          do {
-            let number = prompt("Mời bạn nhập vào giá trị vị trí thứ " + i);
-            if (Number.isInteger(Number(number))) {
-              arr.push(Number(number)); 
-              break;
-            } else {
-              alert("Mời bạn nhập lại giá trị số nguyên tại vị trí " + i);
-            }
-          } while (1);
-        }
-      } else {
-        console.log("Số lượng phần tử không hợp lệ!");
+      n = +prompt("Mời bạn nhập số lượng phần tử : ");
+      arr = new Array(n);
+      for (let i = 1; i <= n; i++) {
+        arr[i] = +prompt("Mời bạn nhập phần tử thứ " + i + "là: ");
       }
+      console.log("đã lưu mảng thành công");
       break;
-
     case 2:
-      console.log("Mảng hiện tại có trong mảng: " + arr);
+      console.log("Mảng là: ");
+      for (let index in arr) {
+        console.log(arr[index]);
+      }
       break;
     case 3:
-      if (arr.length === 0) {
-        console.log("Mảng trống!");
-      } else {
-        let sortedArr = arr.slice().sort((a, b) => a - b); 
-        console.log(
-          `Giá trị lớn nhất: ${
-            sortedArr[sortedArr.length - 1]
-          }, Giá trị nhỏ nhất: ${sortedArr[0]}`
-        );
+      let chan = 0;
+      let le = 0;
+      for (let index in arr) {
+        arr[index] % 2 == 0 ? chan++ : chan;
+        arr[index] % 2 != 0 ? le++ : le;
       }
+      console.log("Số chẵn là: " + chan);
+      console.log("Số lẻ là: " + le);
       break;
     case 4:
-      sum = 0;
-      for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+      let sum = 0;
+      for (let index in arr) {
+        sum = (sum + arr[index]) / 2;
       }
-      console.log("Tổng các phần tử trong mảng: " + sum);
+      console.log("Trung bình cộng là: " + sum);
       break;
-
     case 5:
-      let number = Number(prompt("Mời bạn nhập vào một số để kiểm tra:"));
-      let count = 0;
-      if (Number.isInteger(number)) {
-        for (let i = 0; i < arr.length; i++) {
-          if (number === arr[i]) {
-            count++;
-          }
-        }
-      }
-      count !== 0
-        ? console.log(`Số ${number} xuất hiện ${count} lần trong mảng.`)
-        : console.log(`Số ${number} không tồn tại trong mảng.`);
+      let m = prompt("Mời bạn nhập vị trí bạn muốn xóa phần tử: ");
+      arr.splice(m, 1);
+      console.log("Đã xóa thành công");
       break;
     case 6:
-      if (arr.length === 0) {
-        console.log("Mảng trống!");
-      } else {
-        let sortedArr = arr.slice().sort((a, b) => a - b); 
-        console.log("Phan tu trong mang sau khi sap xep " + arr);
+      let maxIndex;
+      let max = 0;
+      let maxsc = 0;
+      for (let index in arr) {
+        if (arr[index] > max) {
+          max = arr[index];
+          maxIndex = index;
+        }
       }
-      break;
-    case 7:
-      console.log(`Hẹn gặp lại bạn sau`);
+      arr[maxIndex] = 0;
+      max = arr[0];
+      for (let num in arr) {
+        if (num > maxsc) {
+          maxsc = num;
+        }
+      }
+      console.log("Số lớn thứ 2 là: " + maxsc);
+
       break;
     default:
-      console.log(`Mời bạn nhập lại lựa chọn (1-8)`);
+      break;
   }
-} while (choice != 7);
+  if (choice == 0 || choice >= 7) {
+    break;
+  }
+}

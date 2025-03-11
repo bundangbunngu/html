@@ -1,94 +1,68 @@
 let arr = [];
-let sum;
-let flag;
-do {
-  console.log(" 1. Nhập mảng số nguyên");
-  console.log("2. Hiển thị mảng");
-  console.log("3. Tìm các phần tử chẵn và lẻ");
-  console.log("4. Tính trung bình cộng của mảng");
-  console.log("5. Tìm phần tử lớn thứ hai trong mảng");
-  console.log("6. Thoát chương trình");
-  let choice = +prompt("Mời bạn nhập lựa chọn của mình");
+let n;
+while (1) {
+  console.log("======================MENU===================");
+  console.log("1. Nhập số phần tử cần nhập và giá trị của các phần tử. ");
+  console.log("2. In ra giá trị các phần tử đang quản lý.");
+  console.log("3. Tìm phần tử lớn nhất trong mảng và in ra chỉ số của nó");
+  console.log("4. Tính tổng và trung bình cộng của các số dương trong mảng");
+  console.log("5. Đảo ngược mảng");
+  console.log("6. Kiểm tra mảng có đối xứng không");
+  console.log("7. Thoát.");
+  let choice = +prompt("Nhập lựa chọn của bạn: ");
   switch (choice) {
     case 1:
-      let length = +prompt("Mời bạn nhập độ dài của mảng");
-      if (length > 0) {
-        for (let i = 1; i <= length; i++) {
-          do {
-            let number = prompt("Mời bạn nhập vào giá trị vị trí thứ " + i);
-            if (Number.isInteger(Number(number))) {
-              arr.push(Number(number));
-              break;
-            } else {
-              alert("Mời bạn nhập lại giá trị số nguyên tại vị trí " + i);
-            }
-          } while (1);
-        }
-      } else {
-        console.log("Số lượng phần tử không hợp lệ!");
+      n = +prompt("Mời bạn nhập số lượng phần tử : ");
+      arr = new Array(n);
+      for (let i = 1; i <= n; i++) {
+        arr[i] = +prompt("Mời bạn nhập phần tử thứ " + i + "là: ");
       }
+      console.log("đã lưu mảng thành công");
       break;
-
     case 2:
-      console.log("Mảng hiện tại có trong mảng: " + arr);
+      console.log("Mảng là: ");
+      for (let index in arr) {
+        console.log(arr[index]);
+      }
       break;
     case 3:
-      if (arr.length === 0) {
-        console.log("Mảng trống!");
-      } else {
-        let maxDigit = arr[0];
-        let maxIndex = 0;
-        for (let i = 1; i < arr.length; i++) {
-          if (arr[i] > maxDigit) {
-            maxDigit = arr[i];
-            maxIndex = i;
-          }
+      let maxIndex;
+      let max = 0;
+      for (let index in arr) {
+        if (arr[index] > max) {
+          max = arr[index];
+          maxIndex = index;
         }
-
-        console.log("Giá trị lớn nhất:", maxDigit);
-        console.log("Vị trí của nó:", maxIndex);
       }
+      console.log(`Số lớn nhất là ${max}:arr[${maxIndex}]`);
       break;
     case 4:
-      sum = 0;
-      for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-          sum += arr[i];
-        }
+      let sum = 0;
+      let tbc = 0;
+      for (let index in arr) {
+        sum = arr[index] + sum;
+        tbc = sum / n;
       }
-      let sumTB = sum / 3;
-      console.log("Tổng các phần tử trong mảng: " + sum);
-      console.log("Trung bình cộng phần tử có trong mảng: " + sumTB);
+      console.log("tổng là: " + sum);
+      console.log("TBC là: " + tbc);
+
       break;
     case 5:
-      for (let i = 0; i < arr.length / 2; i++) {
-        let temp = arr[i];
-        arr[i] = arr[arr.length - i - 1];
-        arr[arr.length - i - 1] = temp;
-      }
-      console("Mảng sau khi đảo ngược lại: " + arr);
+      console.log(arr.reverse());
       break;
     case 6:
-      flag = 1;
-      if (arr.length === 0) {
-        console.log("Mảng trống!");
-      } else {
-        for (let i = 0; i < arr.length / 2; i++) {
-          if (arr[i] !== arr[arr.length - i - 1]) {
-            flag = 0;
-            break;
-          }
-        }
-        flag == 1
-          ? console.log("Mảng này là mảng đối xứng")
-          : console.log("Mảng này không phải là mảng đối xứng");
+      let count = 0;
+      for (let i = 0; i < n / 2; i++) {
+        arr[i] != arr[n - i - 1] ? count++ : count;
       }
-      break;
-    case 7:
-      console.log(`Hẹn gặp lại bạn sau`);
+      count == 0
+        ? console.log("đây là mảng đối xứng")
+        : console.log("đây không phải mảng đối xứng");
       break;
     default:
-      console.log(`Mời bạn nhập lại lựa chọn (1-8)`);
       break;
   }
-} while (choice != 7);
+  if (choice == 0 || choice >= 7) {
+    break;
+  }
+}
